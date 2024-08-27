@@ -25,7 +25,7 @@ func (u *UserController) RegisterUser(c *gin.Context) {
 		return
 	}
 
-	err := u.userUsecase.Register(req)
+	err := u.userUsecase.Register(req)-
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
