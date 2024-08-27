@@ -1,7 +1,6 @@
 package controller
 
 import (
-	"loan/usecase"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
