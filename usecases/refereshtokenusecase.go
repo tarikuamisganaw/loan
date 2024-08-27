@@ -3,8 +3,8 @@ package usecases
 import (
 	"errors"
 	// "fmt"
-	"meleket/domain"
-	"meleket/infrastructure"
+	"loan/domain"
+	"loan/infrastructure"
 
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )

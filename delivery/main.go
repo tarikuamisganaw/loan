@@ -12,7 +12,7 @@ import (
 
 func main() {
 	// MongoDB connection setup
-	clientOptions := options.Client().ApplyURI("mongodb://localhost:27017/Loan")
+	clientOptions := options.Client().ApplyURI("mongodb://localhost:27017/")
 	client, err := mongo.NewClient(clientOptions)
 	if err != nil {
 		log.Fatal(err)
@@ -26,7 +26,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	db := client.Database("loan_tracker")
+	db := client.Database("loantracker")
 
 	// Initialize router
 	route := routers.SetupRouter(db)

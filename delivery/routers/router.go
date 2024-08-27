@@ -26,7 +26,7 @@ func SetupRouter(db *mongo.Database, userUsecase usecases.UserUsecase, jwtServic
 		userRoutes.GET("/verify-email", userController.VerifyEmail)
 		userRoutes.POST("/login", userController.Login)
 	}
-	auth := router.Group("/api")
+	auth := router.Group("/admin")
 	auth.Use(infrastructure.AuthMiddleware(jwtService))
 	{
 		auth.GET("/getallusers", adminMiddleware, userController.GetAllUsers)

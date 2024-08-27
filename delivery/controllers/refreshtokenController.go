@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"meleket/domain"
-	"meleket/infrastructure"
+	"loan/domain"
+	"loan/infrastructure"
 	"net/http"
 
 	// "time"

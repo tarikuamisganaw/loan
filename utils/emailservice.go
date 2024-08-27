@@ -35,7 +35,7 @@ func SendVerificationEmail(email, token string) error {
 func ValidateEmailToken(tokenString, email string) bool {
 	// Parse the token
 	token, err := jwt.ParseWithClaims(tokenString, &jwt.StandardClaims{}, func(token *jwt.Token) (interface{}, error) {
-		return secretKey, nil
+		return token, nil
 	})
 
 	// Check if token is valid and email matches

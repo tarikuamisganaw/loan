@@ -21,7 +21,7 @@ func NewProfileRouter(p domain.ProfileHandler, engine *gin.Engine) domain.Profil
 func (p *ProfileRouter) InitProfileRoutes(auth *gin.RouterGroup) {
 	// User profile routes
 
-	auth.GET("profile/:user_id", p.profileController.FindProfile)
-	auth.PUT("profile/", p.profileController.UpdateProfile)
-	auth.POST("profile", p.profileController.SaveProfile)
+	auth.GET("users/profile/:user_id", p.profileController.FindProfile)
+	auth.PUT("users/profile/", p.profileController.UpdateProfile)
+	auth.POST("users/profile", p.profileController.SaveProfile)
 }

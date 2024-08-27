@@ -8,7 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func NewRefreshTokenRouter(r *gin.Engine, userUsecase domain.UserUsecaseInterface, refreshTokenUsecase domain.RefreshTokenUsecaseInterface, jwtService infrastructure.JWTService) {
+func NewRefreshTokenRouter(r *gin.Engine, userUsecase domain.UserUsecase, refreshTokenUsecase domain.RefreshTokenUsecaseInterface, jwtService infrastructure.JWTService) {
 	refreshTokenController := controllers.NewRefreshTokenController(userUsecase, refreshTokenUsecase, jwtService)
-	r.POST("/refreshtoken", refreshTokenController.RefreshToken)
+	r.POST("users/refreshtoken", refreshTokenController.RefreshToken)
 }
